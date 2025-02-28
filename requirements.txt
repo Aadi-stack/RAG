@@ -1,3 +1,11 @@
-
+streamlit
+openai
+langchain
+langchain_openai
+langchain_community
+langchain_huggingface
+langchain_groq
+chromadb
+python-dotenv
 langchain_chroma
 langchain_groq
