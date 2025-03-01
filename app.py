@@ -16,6 +16,12 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+# Get the port from the environment variable (default to 8501 if not found)
+port = os.getenv('PORT', 8501)
+
+# Streamlit app code starts here
+st.write("Streamlit is running on port", port)
+
 os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
 embeddings=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
@@ -126,7 +132,9 @@ if api_key:
             st.write("Chat History:", session_history.messages)
 else:
     st.warning("Please enter the GRoq API Key")
-
+    
+if __name__ == "__main__":
+    st.run()  # Ensure Streamlit uses the environment's 
 
 
 
