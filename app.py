@@ -23,6 +23,7 @@ embeddings=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 ## set up Streamlit 
 st.title("Conversational RAG With PDF uplaods and chat history")
 st.write("Upload Pdf's and chat with their content")
+st.secrets["HF_TOKEN"]
 
 ## Input the Groq API Key
 api_key=st.text_input("Enter your Groq API key:",type="password")
